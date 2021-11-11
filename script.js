@@ -136,6 +136,7 @@ class gameobject{
             this.strokecolor = "black"
             this.fillcolor = "grey";
             this.shadowcolor = "black";
+            this.hue = "230";
             this.opac = 1;
             ;
         }
@@ -143,24 +144,28 @@ class gameobject{
             this.strokecolor = "black";
             this.fillcolor = "grey";
             this.shadowcolor = "black";
+            this.hue = "30";
             this.opac = 1;
         } 
         else if(this.type === "moving_vertical_platform"){
             this.strokecolor = "black";
             this.fillcolor = "grey";
             this.shadowcolor = "black";
+            this.hue = "30";
             this.opac = 1;
         } 
         else if(this.type === "lava"){
             this.strokecolor = "red";
             this.fillcolor = "red";
             this.shadowcolor = "red";
+            this.hue = "0";
             this.opac = 1;
         }    
         else if(this.type === "bounce"){
             this.strokecolor = "#6ec971"
             this.fillcolor = "green";
             this.shadowcolor = "#6ec971";
+            this.hue = "190";
             this.opac = 1;
         }
         else if(this.type === "water"){
@@ -168,23 +173,27 @@ class gameobject{
             this.strokecolor = "white"
             this.fillcolor = "#6dccff";
             this.shadowcolor = "#6dccff";
+            this.hue = "130";
             this.opac = 0.5;
         }
         else if(this.type === "key"){
             this.strokecolor = "#f0dc29"
             this.fillcolor = "#f0dc29";
             this.shadowcolor = "white";
+            this.hue = "80";
             this.opac = 1;
         }
         else if(this.type === "keydoor"){
             this.strokecolor = "#6c4f38"
             this.fillcolor = "#6c4f38";
             this.shadowcolor = "black";
+            this.hue = "90";
             this.opac = 1;
         }else{
             this.strokecolor = "white"
             this.fillcolor = "pink";
             this.shadowcolor = "pink";
+            this.hue = "200";
             this.opac = 1;
         }
     }
@@ -438,7 +447,8 @@ function drawraycasts(){
         
 
         if(v.obj !== null){
-            ctx2.fillStyle = v.obj.fillcolor;
+            // ctx2.fillStyle = v.obj.fillcolor;
+            ctx2.fillStyle = "hsl("+v.obj.hue+",50%,"+ (80-(v.distance/10))+"%)";
             // ctx2.strokeRect(i*(canvas2.width/raycastsinfos.rayamount)*2,(canvas2.height/2)-((raycastsinfos.renderdistance-v.distance)/2),1,raycastsinfos.renderdistance-v.distance);
             ctx2.fillRect(i*(canvas2.width/raycastsinfos.rayamount)*2,(canvas2.height/2)-((raycastsinfos.renderdistance-v.distance)/2),2.5,raycastsinfos.renderdistance-v.distance);
         }

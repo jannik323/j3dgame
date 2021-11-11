@@ -1,0 +1,114 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+canvas {
+    background-color: whitesmoke;
+    
+    margin-bottom: 2rem;
+    
+    z-index: 0;
+}
+
+input{
+    margin-bottom: 2rem;
+    z-index: 1;
+    background-color: azure;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+textarea{
+
+width: 30rem;
+}
+
+div.menu{
+
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    box-shadow: 10px 0px 14px grey, -10px -0px 14px grey, -0px -10px 14px grey, -0px 10px 14px grey;
+    padding: 1rem;
+    background-color: white;
+    z-index: 1;
+
+}
+
+button.X{
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    box-shadow: 1px 0px 4px grey, -1px -0px 4px grey, -0px -1px 4px grey, -0px 1px 4px grey;
+}
+
+button.menubtn{
+    margin-top: 1rem;
+    width: 33%;
+    min-width: fit-content;
+    border: none;
+    box-shadow: 1px 0px 4px grey, -1px -0px 4px grey, -0px -1px 4px grey, -0px 1px 4px grey;
+    align-self: center;
+}
+
+.btn{
+    margin-right: 0.5rem;
+    min-width: fit-content;
+    border: none;
+    box-shadow: 1px 0px 4px grey, -1px -0px 4px grey, -0px -1px 4px grey, -0px 1px 4px grey;
+    align-self: center;
+    background-color: azure;
+}
+
+.btn:hover{
+
+    background-color: gray;
+}
+
+button:hover{
+
+    background-color: gray;
+}
+
+div h1{
+    display: block;
+    margin-top: 1rem;
+    align-self: center;
+
+}
+
+#editorbuttons{
+    margin: 2rem;
+    display: none;
+    flex-direction: column;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.DownloadMap{
+    display: none;
+}
+
+.topbar{
+    display: flex;
+    flex-direction: row;
+}

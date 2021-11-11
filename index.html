@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>test site 1</title>
+        <meta name="jadventure1" content="jadventure" author="323j">
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    
+<body>
+
+<div id="pausemenu" class="menu" > 
+
+    <h1> Menu </h1>
+    <button class="X" onclick=" togglePause();">X</button>
+    <button class="menubtn" onclick=" togglePause();">Continue (p)</button>
+    <button class="menubtn" onclick=" togglePause(); player1.reset();">Reset (r)</button>
+    <button class="menubtn" onclick=" togglePause(); hardreset();">Restart</button>
+    <button class="menubtn" onclick=" toggleMenu('settingsmenu');" >Settings</button>
+    <button class="menubtn" onclick=" togglePause(); starteditor(); ">Level Editor</button>
+
+</div>
+
+<div id="settingsmenu" class="menu"> 
+
+    <h1>Settings </h1>
+    <button class="X" onclick=" toggleMenu('settingsmenu');">X</button>
+    <button class="menubtn" onclick="togglestyle(); render(); " >Toggle Style</button>
+    </div>  
+
+
+</div>
+
+
+<div class="topbar" >
+<input id="levelhtml" type="text" disabled value="Tutorial" hidden>
+</div>
+
+<canvas id="canvas"></canvas>
+<canvas id="canvas2"></canvas>
+
+<div>
+<textarea id="keyshtml" readonly hidden>  </textarea> 
+</div>
+
+<div id="editorbuttons">
+
+<div class="flex">
+    <label for="inputs" class="btn"> Input Type : </label>
+    <select id="inputs" class="btn" onchange="changeinput(this);" >
+
+        <option value="platform" >Platform</option>
+        <option value="lava">Lava</option>
+        <option value="bounce">Bounce</option>
+        <option value="spawnpoint">Spawnpoint</option>
+        <option value="water">Water</option>
+        <option value="keydoor">Door</option>
+        <option value="key">Key</option>
+        <option value="delete">Delete</option>
+        <option value="nove_to_top">Move To Top</option>
+        <option value="anti_clipping_b">Anti Clipping Bottom</option>
+        <option value="moving_horizontal_platform">Horizontal Moving Platform</option>
+        <option value="moving_vertical_platform">Vertical Moving Platform</option>
+
+    </select>
+</div>
+
+<div  class="flex">
+    
+<button  class="btn" onclick="savelevel();" >Save Level</button>
+<button class="btn" onclick="loadlevel();" >Load Level</button>
+<button class="btn" onclick="loadlevel(LEVELS.length);" >Add Level</button>
+</div>
+
+<div class="flex">
+<button class="btn" onclick="savemap()" >Save Map</button>
+<button for="loadmap" class="btn" onclick="loadmap()" >Load Map</button>
+<button class="btn" onclick="clearmap()" >Clear Map</button>
+
+
+</div>
+
+<div class="flex">
+    <a id="DownloadMap" download="map.txt" class="btn" onclick="this.style.display = 'none'"> Download Map</a>
+    <input type="file" id="loadmap" accept=".txt" >
+    </div>
+</div>
+
+p
+</body>
+
+<script src="script.js" defer></script>
+</html>
